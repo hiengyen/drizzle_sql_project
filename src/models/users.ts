@@ -1,6 +1,6 @@
 import { drizzle } from 'drizzle-orm/node-postgres'
-import { InferModel, eq } from 'drizzle-orm'
-import { pgTable, serial, text } from 'drizzle-orm/pg-core'
+import { InferModel, InferInsertModel, InferSelectModel, eq } from 'drizzle-orm'
+import { pgTable, serial, text, timestamp } from 'drizzle-orm/pg-core'
 import { Pool } from 'pg'
 
 export const users = pgTable('users', {
