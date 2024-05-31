@@ -1,6 +1,14 @@
 {
+  "name": "nodejs-be-ecom",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
-    "dev": "nodemon"
+    "dev": "node --watch server.js"
   },
   "dependencies": {
     "body-parser": "^1.20.2",

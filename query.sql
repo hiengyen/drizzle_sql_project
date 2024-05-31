@@ -2,7 +2,7 @@
 create type permissions as enum('0000', '1111');
 
 create table users (
-  user_id uuid primary key,
+  user_id serial primary key,
   name text not null,
   email text not null,
   passwd text not null,

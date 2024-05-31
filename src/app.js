@@ -1,17 +1,14 @@
 import express from 'express'
-import http from 'http'
 import morgan from 'morgan'
 import helmet from 'helmet'
 import cookieParser from 'cookie-parser'
 import compression from 'compression'
 import cors from 'cors'
-import logger from './utils/logger'
 
 import 'dotenv/config'
-import router from './router'
+import router from './router/index.js'
 
 const app = express()
-const PORT = process.env.PORT || 8000
 
 //init middlewares
 app.use(morgan('dev'))
@@ -30,8 +27,4 @@ app.use(
 app.use('/', router)
 
 //init server
-const server = http.createServer(app)
-
-server.listen(PORT, () => {
-  logger.info(`App running on port ${PORT}`)
-})
+export default app
